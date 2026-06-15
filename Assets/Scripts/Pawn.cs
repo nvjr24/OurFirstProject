@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pawn : MonoBehaviour
+public abstract class Pawn : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float speed = 1f;
+    
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public abstract void Movement(Vector3 Move);
+    
 }
+

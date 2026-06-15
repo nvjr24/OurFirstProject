@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StarshipController : MonoBehaviour
+public class StarshipPawn :Pawn
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Transform tf;
 
-    // Update is called once per frame
-    void Update()
+    public void Start()
     {
-        
+        tf = GetComponent<Transform>();
+    }
+    public override void Movement(Vector3 Move)
+    {
+        tf.position = tf.position + (Move * speed * Time.deltaTime);
     }
 }
